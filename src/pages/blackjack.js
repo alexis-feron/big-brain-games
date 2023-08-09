@@ -63,7 +63,7 @@ export default function Blackjack() {
     function showDice(nb){
         const div = document.querySelector('#game_board');
         let img = document.createElement("img");
-        img.src = "/"+nb+".png";
+        img.src = "https://github.com/alexis-feron/big-brain-games/blob/main/public/"+nb+".png?raw=true";
         img.height=150;
         div.appendChild(img);
     }

@@ -30,7 +30,7 @@ export default function Home() {
         if(document.querySelector('#game_board img')===null){
             for(let i=0; i<allumette_restante; i++){
                 let img = document.createElement("img");
-                img.src = '/allumette.png';
+                img.src = "https://github.com/alexis-feron/big-brain-games/blob/main/public/allumette.png?raw=true";
                 img.height=150;
                 img.style.transform="rotate("+Math.floor(Math.random() * (15 - (-15) + 1) + (-15))+"deg)"; 
                 div.appendChild(img);
