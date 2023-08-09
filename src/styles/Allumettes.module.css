@@ -1,0 +1,160 @@
+.content {
+	padding: 20px;
+	display: grid;
+	height: calc(100vh - 100px);
+	color: white;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 20px 20px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"main main log";
+}
+
+.main {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	grid-area: main;
+	text-align: center;
+	border-radius: 40px;
+	margin: 0px 25px 25px 50px;
+	background: #232427;
+	box-shadow: 7px 7px 14px #171719,
+		-7px -7px 14px #2f3135;
+}
+
+.name_player_get {
+	padding: 10px;
+	align-self: start;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.board {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: auto;
+	height: 100%;
+	margin-top: 20px;
+}
+
+.game_board {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	gap: 20px;
+}
+
+.game_validation {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.log {
+	padding: 20px;
+	grid-area: log;
+	margin: 0px 50px 25px 25px;
+	border-radius: 40px;
+	background: #232427;
+	box-shadow: 7px 7px 14px #171719,
+		-7px -7px 14px #2f3135;
+}
+
+.bt_remove {
+	background: linear-gradient(to right, #2D51F2, #12F5B0);
+	border: none;
+	color: white;
+	margin: 5px;
+	padding: 10px 25px 10px 25px;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	align-self: center;
+
+}
+
+.bt_remove:hover {
+	background: linear-gradient(to right, #526de4, #3efcc3);
+	cursor: pointer;
+}
+
+.goal {
+	padding-top: 10px;
+	font-size: 17px;
+}
+
+.logTitle {
+	text-align: center;
+	padding: 5px;
+}
+
+.playButton {
+	border: none;
+	color: white;
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-around;
+	padding: 8px;
+	margin: auto;
+	margin-top: 15px;
+	align-items: center;
+	background: linear-gradient(to right, #2D51F2, #12F5B0);
+	visibility: hidden;
+}
+
+.arrowIcon {
+	width: 20px;
+	height: 20px;
+}
+
+.spanButton {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+@media screen and (max-width: 850px) {
+	.content {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr;
+		grid-template-areas:
+			"main main"
+			"log log";
+	}
+	
+	.game_board {
+		display: block;
+		gap: 20px;
+	}
+
+	.log {
+		margin: 0px 50px 0px 50px;
+	}
+
+	.main {
+		margin: 0px 50px 25px 50px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.game_board {
+		display: block;
+		gap: 20px;
+	}
+	.log {
+		margin: 0px 10px 0px 10px;
+	}
+
+	.main {
+		margin: 0px 10px 10px 10px;
+	}
+}

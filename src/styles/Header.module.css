@@ -1,0 +1,164 @@
+.header {
+    height: 100px;
+    display: flex;
+    color: white;
+    font-size: 0.9em;
+}
+
+.navIcon {
+    display: none;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.account{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+}
+
+.account span{
+    margin-right: 15px;
+}
+
+.accountIcon{
+    width: 35px;
+    height: 35px;
+}
+
+.accountButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    border: none;
+    border-radius: 15px;
+    background-color: #1E1E1E;
+    padding: 15px;
+    gap: 2px;
+}
+
+.dropdown a{
+    color: white;
+    text-decoration: none;
+}
+
+.globalAcc:hover > .dropdown{
+    display: flex;
+}
+
+.logOutButton{
+    all: unset;
+    cursor: pointer;
+}
+
+.menuHidden {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100vh;
+    background-color: #232427;
+    box-shadow: 2px 0px 15px #1E1E1E;
+}
+
+.navIconHidden {
+    margin: 35px auto 0 30px;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    cursor: pointer;
+    display: flex;
+}
+
+.linksHidden {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    box-shadow: 0px -3px 5px #1E1E1E;
+}
+
+.linksHidden a {
+    margin: 15px;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.linksHidden a:active {
+    color: rgb(109, 109, 109);
+}
+
+
+@media screen and (max-width: 450px) {
+    .header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .account {
+        padding-right: 20px;
+    }
+
+    .account span {
+        font-size: 0.9em;
+    }
+
+    .navIcon {
+        margin-left: 30px;
+        color: white;
+        font-size: 30px;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .links {
+        display: none;
+    }
+
+}
+
+@media screen and (max-height: 450px) {
+    .header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navIcon {
+        margin-left: 30px;
+        color: white;
+        font-size: 30px;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .links {
+        display: none;
+    }
+
+}
