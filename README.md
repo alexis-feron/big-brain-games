@@ -9,7 +9,7 @@ Vous pouvez jouer au jeu de nim ou à un jeu de blackjack avec des dés. Vous po
 
 ## Demo
 
-https://big-brain-games.vercel.app
+https://big-brain-games.alexis-feron.com
 
 
 ## Authors
