@@ -7,6 +7,7 @@ import {
   faHouse,
   faLinesLeaning,
   faRankingStar,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -43,37 +44,54 @@ export default function Header() {
       />
       <nav className={styles.links}>
         <Link href="/" className={styles.navlink}>
-          <FontAwesomeIcon icon={faHouse} /> Accueil
+          <FontAwesomeIcon icon={faHouse} className={styles.navbarIcon} />{" "}
+          Accueil
         </Link>
         <Link href="/allumettes" className={styles.navlink}>
-          <FontAwesomeIcon icon={faLinesLeaning} /> Allumettes
+          <FontAwesomeIcon
+            icon={faLinesLeaning}
+            className={styles.navbarIcon}
+          />{" "}
+          Allumettes
         </Link>
         <Link href="/blackjack" className={styles.navlink}>
-          <FontAwesomeIcon icon={faDice} /> Blackjack
+          <FontAwesomeIcon icon={faDice} className={styles.navbarIcon} />{" "}
+          Blackjack
         </Link>
         <Link href="/classement" className={styles.navlink}>
-          <FontAwesomeIcon icon={faRankingStar} /> Classement
+          <FontAwesomeIcon icon={faRankingStar} className={styles.navbarIcon} />{" "}
+          Classement
         </Link>
       </nav>
 
-      <div className={styles.menuHidden}>
+      <div className={styles.menuHidden} style={{ display: "none" }}>
         <FontAwesomeIcon
           className={styles.navIconHidden}
-          icon={faBars}
+          icon={faXmark}
           onClick={() => setOpen(!isOpen)}
         />
         <nav className={styles.linksHidden}>
           <Link href="/" className={styles.navlink}>
-            <FontAwesomeIcon icon={faHouse} /> Accueil
+            <FontAwesomeIcon icon={faHouse} className={styles.navbarIcon} />{" "}
+            Accueil
           </Link>
           <Link href="/allumettes" className={styles.navlink}>
-            <FontAwesomeIcon icon={faLinesLeaning} /> Allumettes
+            <FontAwesomeIcon
+              icon={faLinesLeaning}
+              className={styles.navbarIcon}
+            />{" "}
+            Allumettes
           </Link>
           <Link href="/blackjack" className={styles.navlink}>
-            <FontAwesomeIcon icon={faDice} /> Blackjack
+            <FontAwesomeIcon icon={faDice} className={styles.navbarIcon} />{" "}
+            Blackjack
           </Link>
           <Link href="/classement" className={styles.navlink}>
-            <FontAwesomeIcon icon={faRankingStar} /> Classement
+            <FontAwesomeIcon
+              icon={faRankingStar}
+              className={styles.navbarIcon}
+            />{" "}
+            Classement
           </Link>
         </nav>
       </div>
