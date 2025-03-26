@@ -99,3 +99,10 @@
   width: 150%;
   gap: 0;
 }
+
+@media (max-width: 508px) {
+  .MainformEmailPassword .form .inputs {
+    width: 100%;
+    gap: 10px;
+  }
+}
