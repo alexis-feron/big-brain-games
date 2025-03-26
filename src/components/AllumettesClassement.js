@@ -1,18 +1,21 @@
-import styles from "@/styles/ProfilStatsBlock.module.css";
-import stylesCLS from "@/styles/Classement.module.css";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import useFetch from "@/utils/hooks/useFetch";
 import { API_GET_MATCHES_LEADERBOARD } from "@/assets/variables";
+import stylesCLS from "@/styles/Classement.module.css";
+import styles from "@/styles/ProfilStatsBlock.module.css";
+import useFetch from "@/utils/hooks/useFetch";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 export default function AllumettesStatsBlock() {
-  const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
-  useEffect((router) => {
-    async function getMatchesStats(router) {
+  useEffect(() => {
+    async function getMatchesStats() {
+      setLoading(true);
       let resp = await useFetch.get(API_GET_MATCHES_LEADERBOARD);
 
       if (!resp) {
+        setLoading(false);
         return (document.body.innerHTML = "No matches stats found");
       }
       const winners = new Map();
@@ -55,8 +58,9 @@ export default function AllumettesStatsBlock() {
 
         i++;
       }
+      setLoading(false);
     }
-    getMatchesStats(router);
+    getMatchesStats();
   }, []);
 
   return (
@@ -65,6 +69,13 @@ export default function AllumettesStatsBlock() {
         <h1 className={styles.title}>Allumettes</h1>
       </div>
 
+      {loading ? (
+        <div className={styles.loading}>
+          <FontAwesomeIcon icon={faSpinner} spin /> Chargement...
+        </div>
+      ) : (
+        ""
+      )}
       <div className={styles.parentAllumettes}></div>
     </section>
   );

@@ -2,11 +2,15 @@ import gameboy from "@/assets/images/gameboy.webp";
 import FormulaireConnexion from "@/components/FormulaireConnexion";
 import Header from "@/components/Header";
 import styles from "@/styles/InscriptionConnexion.module.css";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function Inscription() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Big Brain Games</title>
+      </Head>
       <Header />
 
       <main className={styles.content}>

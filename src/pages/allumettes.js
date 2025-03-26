@@ -3,6 +3,7 @@ import styles from "@/styles/Allumettes.module.css";
 import getUser from "@/utils/functions/getUser";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Head from "next/head";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -152,6 +153,9 @@ export default function Home() {
 
   return (
     <div id="container" className={styles.container}>
+      <Head>
+        <title>Big Brain Games</title>
+      </Head>
       <Header />
       <main id="content" className={styles.content}>
         <div id="main" className={styles.main}>

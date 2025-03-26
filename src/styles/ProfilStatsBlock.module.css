@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 30%;
-  height: 80%;
+  height: 100%;
   padding: 20px;
   border-radius: 40px;
   background: #232427;
@@ -43,14 +43,24 @@
 
 @media screen and (max-width: 1000px) {
   .container {
-    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 80%;
+    height: 100%;
     padding: 20px;
     border-radius: 40px;
     background: #232427;
     box-shadow: 7px 7px 14px #171719, -7px -7px 14px #2f3135;
   }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  gap: 10px;
+  vertical-align: middle;
 }

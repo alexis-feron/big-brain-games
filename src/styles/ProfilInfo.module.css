@@ -1,20 +1,65 @@
-.parent{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 40px;
+  background: #232427;
+  box-shadow: 7px 7px 14px #171719, -7px -7px 14px #2f3135;
 }
 
-.deleteButton{
-    background-color: #00a2ff;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: -25px;
+.upperBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.title {
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.parent {
+  display: flex;
+  padding: 20px 0px 5px 0px;
+  flex-direction: column;
+  gap: 25px; /* Espace uniforme entre les éléments */
+  align-items: stretch; /* Étirer les éléments pour remplir la largeur */
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 25px;
+}
+
+.deleteButton {
+  background-color: #00a2ff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  align-self: center; /* Centrer le bouton */
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 40px;
+    background: #232427;
+    box-shadow: 7px 7px 14px #171719, -7px -7px 14px #2f3135;
+  }
 }

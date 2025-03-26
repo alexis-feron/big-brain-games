@@ -1,16 +1,16 @@
 import { API_GET_BLACKJACK_LEADERBOARD } from "@/assets/variables";
 import stylesCLS from "@/styles/Classement.module.css";
 import styles from "@/styles/ProfilStatsBlock.module.css";
-import getUser from "@/utils/functions/getUser";
 import useFetch from "@/utils/hooks/useFetch";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 export default function AllumettesStatsBlock() {
-  const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
-  useEffect((router) => {
-    async function getMatchesStats(router) {
+  useEffect(() => {
+    async function getMatchesStats() {
       let resp = await useFetch.get(API_GET_BLACKJACK_LEADERBOARD);
 
       if (!resp) {
@@ -56,8 +56,9 @@ export default function AllumettesStatsBlock() {
 
         i++;
       }
+      setLoading(false);
     }
-    getMatchesStats(router);
+    getMatchesStats();
   }, []);
 
   return (
@@ -65,6 +66,14 @@ export default function AllumettesStatsBlock() {
       <div className={styles.upperBlock}>
         <h1 className={styles.title}>Blackjack</h1>
       </div>
+
+      {loading ? (
+        <div className={styles.loading}>
+          <FontAwesomeIcon icon={faSpinner} spin /> Chargement...
+        </div>
+      ) : (
+        ""
+      )}
 
       <div className={styles.parentBlackjack}></div>
     </section>
