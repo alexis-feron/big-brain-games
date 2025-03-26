@@ -45,8 +45,11 @@ export default function Home() {
           <Image
             className={styles.image}
             src={gameboy}
-            alt="index.js (Home) | imageBlock | image not displaying"
-          ></Image>
+            alt="Gameboy"
+            width={500}
+            height={300}
+            priority
+          />
         </section>
       </main>
     </div>

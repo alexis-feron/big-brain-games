@@ -63,9 +63,18 @@ export default function Header() {
           onClick={() => setOpen(!isOpen)}
         />
         <nav className={styles.linksHidden}>
-          <Link href="/allumettes">Allumettes</Link>
-          <Link href="/blackjack">Blackjack</Link>
-          <Link href="/classement">Classement</Link>
+          <Link href="/" className={styles.navlink}>
+            <FontAwesomeIcon icon={faHouse} /> Accueil
+          </Link>
+          <Link href="/allumettes" className={styles.navlink}>
+            <FontAwesomeIcon icon={faLinesLeaning} /> Allumettes
+          </Link>
+          <Link href="/blackjack" className={styles.navlink}>
+            <FontAwesomeIcon icon={faDice} /> Blackjack
+          </Link>
+          <Link href="/classement" className={styles.navlink}>
+            <FontAwesomeIcon icon={faRankingStar} /> Classement
+          </Link>
         </nav>
       </div>
 
