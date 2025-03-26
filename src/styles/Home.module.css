@@ -1,126 +1,128 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
-.textBlock{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 8%;
-    width: 45%;
-
+.textBlock {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8%;
+  width: 50%;
 }
 
-.texts{
-    margin: 40px;
+.texts {
+  margin: 40px;
 }
 
-.textsTitle{
-    font-weight: 800;
-    font-size: 70px;
+.textsTitle {
+  font-weight: 800;
+  font-size: 70px;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
-.textsDescription{
-    font-size: 18px;
+.textsDescription {
+  font-size: 18px;
 }
 
-.arrowIcon{
-    width: 35px;
-    height: 35px;
+.arrowIcon {
+  width: 35px;
+  height: 35px;
 }
 
-.playButton{
-    border: none;
-    color: white;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-around;
-    padding: 8px;
-    align-items: center;
-    background: linear-gradient(to right, #2D51F2, #12F5B0);
-    margin-left: 40px;
+.playButton {
+  border: none;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  align-items: center;
+  background: linear-gradient(to right, #2d51f2, #12f5b0);
+  margin-left: 40px;
 }
 
-.playButton:hover{
-    cursor: pointer   
+.playButton:hover {
+  cursor: pointer;
 }
 
-.spanButton{
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 25px;
-    font-weight:600;
+.spanButton {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 25px;
+  font-weight: 600;
 }
 
-
-.imageBlock{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 100%;
+.imageBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
 }
 
-.image{
-    width: 100%;
-    height: auto;
-    transform: rotate(8deg);
-    z-index: -1;
+.image {
+  width: 100%;
+  height: auto;
+  transform: rotate(8deg);
+  z-index: -1;
 }
 
-@media screen and (max-width: 850px){
-    .textsTitle{
-        font-weight: 700;
-        font-size: 50px;
-    }
+@media screen and (max-width: 850px) {
+  .textsTitle {
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
 
-    .textsDescription{
-        font-size: 15px;
-    }
+  .textsDescription {
+    font-size: 15px;
+  }
 
-    .spanButton{
-        font-size: 20px;
-        font-weight: 600;
-    }
+  .spanButton {
+    font-size: 20px;
+    font-weight: 600;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    .content{
-        flex-direction: column;
-    }
+  .content {
+    flex-direction: column;
+  }
 
-    .textBlock{
-        width: auto;
-        height: 45%;
-        text-align: center;
-        margin-top: 20px;
-    }
+  .textBlock {
+    width: auto;
+    height: 50%;
+    text-align: center;
+    margin-top: 20px;
+  }
 
-    .playButton {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .playButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .spanButton{
-        font-size: 17px;
-        font-weight: 600;
-    }
+  .spanButton {
+    font-size: 17px;
+    font-weight: 600;
+  }
 
-    .imageBlock {
-        width: 90%;
-        height: 40%;
-        margin-bottom: 120px;
-    }
+  .imageBlock {
+    width: 90%;
+    height: 40%;
+    margin-bottom: 120px;
+  }
 }
