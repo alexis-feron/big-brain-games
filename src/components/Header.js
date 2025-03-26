@@ -38,7 +38,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <FontAwesomeIcon
-        className={styles.navIcon}
+        className={`${styles.navIcon} ${styles.accountIcon}`}
         icon={faBars}
         onClick={() => setOpen(!isOpen)}
       />
@@ -66,7 +66,7 @@ export default function Header() {
 
       <div className={styles.menuHidden} style={{ display: "none" }}>
         <FontAwesomeIcon
-          className={styles.navIconHidden}
+          className={`${styles.navIconHidden} ${styles.accountIcon}`}
           icon={faXmark}
           onClick={() => setOpen(!isOpen)}
         />
