@@ -36,7 +36,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 60px;
+  min-height: 100px;
+  padding-right: 30px;
 }
 
 .account span {

@@ -115,7 +115,7 @@ export default function Home() {
         document.querySelector("#name_player_get").innerHTML =
           nom_joueur + " a gagné !";
 
-        if (nom_joueur === userConnected.pseudo) await addWin(true);
+        if (nom_joueur === userConnected?.pseudo) await addWin(true);
         else await addWin(false);
 
         document.querySelector("#goal").style.visibility = "hidden";
