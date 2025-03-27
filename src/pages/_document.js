@@ -8,6 +8,10 @@ export default function Document() {
           name="description"
           content="Jouez et découvrez nos nombreux mini-jeux contre une IA !"
         />
+        <meta
+          name="google-site-verification"
+          content="id5BdwKoxPwKEcQ5LHteqFS6Vx0L4cQnkNCszpTTvSo"
+        />
       </Head>
       <body>
         <Main />
