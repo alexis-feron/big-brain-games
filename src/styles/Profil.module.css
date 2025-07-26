@@ -9,7 +9,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 25px;
-  height: 100vh;
+  min-height: calc(100vh - 184px);
 }
 
 .data {
